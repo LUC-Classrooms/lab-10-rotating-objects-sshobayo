@@ -29,9 +29,9 @@ function draw() {
   // capture the distance of the mouse from each object
   let mouse1 = dist(mouseX, mouseY, obj1.x, obj1.y); 
   fill(0);
- Text(mouse1, 50, 50) 
+ text(mouse1, 50, 50) 
   let mouse2 = dist(mouseX, mouseY, obj2.x, obj2.y); 
-  Text(mouse2, 250, 50)
+  text(mouse2, 250, 50)
 
   if(mouse1 < 50) { // first, see if the mouse is within range
     if(mouseIsPressed){
