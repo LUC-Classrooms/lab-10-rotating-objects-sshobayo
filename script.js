@@ -69,9 +69,9 @@ function myClass(tempX, tempY){
   Create a spin method here. Look at the reset() method below and the spin() method from the Sakai example for this week.
   the function assigned to this.spin should take a number argument; that number should be _added_ to the value of this.angle. The reset() method sets this.angle back to 0, and this.scale back to 1
   */
-  this.spin = function(){
-this.angle += s;
-this.scale *= .99;
+  this.spin = function(s){
+    this.angle += s;
+    this.scale *= .99;
 
   }
 
@@ -88,16 +88,16 @@ this.scale *= .99;
   
   The argument to rotate() should be "this.angle", which is affected by the spin() and reset() methods
 */
-    PushManager(); // create a transparency layer
+    push(); // create a transparency layer
     translate(this.x, this.y); // move the layer
     rotate(this.angle); // rotate the layer
-    this.scale(this.scale) // scale the layer
+    scale(this.scale) // scale the layer
     fill(this.color);
     rectMode(CENTER);
     // change the location to 0, 0
     rect(0, 0, this.diam, this.diam); // draw a square
     
-    PopStateEvent(); // dispose of the layer
+    pop(); // dispose of the layer
   }
   
 }
